@@ -3,7 +3,7 @@ const $personajes=document.querySelector(".personajes")
 const html=document.implementation.createHTMLDocument();
 async function load(){
   
-    for (let i = 1; i <=30; i++) {
+    for (let i = 1; i <=300; i++) {
         var personaje20=await llamarPersonaje(i);
         
  }
