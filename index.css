@@ -1,5 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #3E3D3D;
+}
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
 .personajes img{
-    height: 300px;
-    width: 370px;
+    height: 20vw;
+    width: 20vw;
     margin: 2px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+}
+.personajes {
+    display: grid;
+    grid-template-columns: repeat(4,22vw);
+    
+    grid-gap: 6px;
+    margin-left: 3vw;
+
+    
+}
+
+.hover{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+@media screen and (max-width:800px){
+    .personajes{
+        grid-template-columns: repeat(2,35vw);
+        margin-left: 11vw;
+    }
+
+    .personajes img{
+        height: 35vw;
+        width: 35vw;
+    }
 }

@@ -3,7 +3,7 @@ const $personajes=document.querySelector(".personajes")
 const html=document.implementation.createHTMLDocument();
 async function load(){
   
-    for (let i = 1; i < 200; i++) {
+    for (let i = 1; i <=30; i++) {
         var personaje20=await llamarPersonaje(i);
         
  }
@@ -13,7 +13,10 @@ async function llamarPersonaje(id){
     const personaje= await data.json()
     const parametro=personaje.image
 
-    let template=`<img src="${parametro}" alt="">`
+    let template=`<div class="hover">
+    <img src="${parametro}" alt="">
+    
+    </div>`
  
     html.body.innerHTML=template;
     $personajes.append(html.body.children[0])
