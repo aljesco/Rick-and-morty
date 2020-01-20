@@ -3,6 +3,12 @@ body{
     padding: 0;
     background-color: #3E3D3D;
 }
+p{
+    color: white;
+    z-index: 2;
+
+    
+}
 h1{
     color: white;
     display: flex;
@@ -12,33 +18,54 @@ h1{
 
 .personajes img{
     height: 20vw;
-    width: 20vw;
-    margin: 2px;
-    border-radius: 12px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    width: 100%;
+    margin: 0px;
+    
     
 }
+
 .personajes {
     display: grid;
     grid-template-columns: repeat(4,22vw);
-    
-    grid-gap: 6px;
+    justify-content: center;
+    grid-gap: 10px;
     margin-left: 3vw;
 
     
 }
 
 .hover{
-    display: flex;
+    display: grid;
     justify-content: center;
+    position: relative;
     
 }
+.hover p{
+    padding: 4px;
+    margin: 0;
+    font-size: 20px;
+    opacity: 1;
+}
+.hover .informacion{
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    opacity: .8;
+    position: absolute;
+    bottom: 0px;
+    transition: 1s;
+ 
+}
+
+
+
+
+/*--------------------------RESPOSIVE DESING----------------------------*/
 
 
 @media screen and (max-width:800px){
     .personajes{
         grid-template-columns: repeat(2,35vw);
-        margin-left: 11vw;
+        margin-left: 3vw;
     }
 
     .personajes img{
