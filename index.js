@@ -39,7 +39,7 @@ imagen_html.addEventListener("click",siFunciona);
  async function siFunciona(){
     const data=await fetch("https://rickandmortyapi.com/api/character/".concat(id));
     const data_json= await data.json();
-    console.log(data_json)
+    alert(data_json.name)
 }
 
 }
